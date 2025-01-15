@@ -5,7 +5,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
-interface User {
+export interface User {
 	id: number;
 	firstName: string;
 	lastName: string;
@@ -77,10 +77,10 @@ const UserList: React.FC = () => {
 		fetchUsers();
 	}, []);
 
-	const refreshUserList = (newUser: User) => {
-		setUserList((prevList) => [...prevList, newUser]);
-	};
-
+	  const refreshUserList = (newUser: User) => {
+    setUserList((prevList) => [...prevList, newUser]);
+  };
+ 
 	if (loading) {
 		return <div>Loading...</div>;
 	}
@@ -103,9 +103,9 @@ const UserList: React.FC = () => {
 				</button>
 			</div>
 			{showForm && (
-				<UserForm
-					closeForm={() => setShowForm(false)}
-					refreshUsers={refreshUserList}
+				  <UserForm
+				  closeForm={() => setShowForm(false)}
+				  refreshUsers={refreshUserList}  
 				/>
 			)}
 			{showDeleteModal && (

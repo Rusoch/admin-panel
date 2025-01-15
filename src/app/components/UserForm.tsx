@@ -1,10 +1,11 @@
 "use client";
 import { useState } from "react";
 import axios from "axios";
+import { User} from "./UserList";
 
 interface UserFormProps {
 	closeForm: () => void;
-	refreshUsers: (newUser: object) => void;
+	refreshUsers: (newUser: User) => void;
 }
 
 const UserForm: React.FC<UserFormProps> = ({ closeForm, refreshUsers }) => {
@@ -35,7 +36,7 @@ const UserForm: React.FC<UserFormProps> = ({ closeForm, refreshUsers }) => {
 			return;
 		}
 
-		if (age < 18) {
+		if (age < "18") {
 			alert("You must be 18 or older to access this content.");
 			return;
 		}

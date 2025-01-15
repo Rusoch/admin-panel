@@ -29,7 +29,6 @@ export default NextAuth({
     session: async ({ session, token }) => {
       if (token) {
         session.user = {
-          id: token.id,
           name: token.name,
           email: token.email,
         };
