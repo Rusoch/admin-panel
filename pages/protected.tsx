@@ -1,4 +1,5 @@
 import { useSession, getSession, signOut } from "next-auth/react";
+import {GetServerSidePropsContext} from "next";
 
 
 const ProtectedPage = () => {
@@ -20,7 +21,7 @@ const ProtectedPage = () => {
 	);
 };
 
-export const getServerSideProps = async (context: any) => {
+export const getServerSideProps = async (context: GetServerSidePropsContext) => {
 	const session = await getSession(context);
 
 	if (!session) {
