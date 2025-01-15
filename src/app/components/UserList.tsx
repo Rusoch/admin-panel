@@ -68,6 +68,7 @@ const UserList: React.FC = () => {
 				setUserList(usersWithDefaults);
 				setLoading(false);
 			} catch (err) {
+				console.error("Error fetching users:", err);
 				setError("Failed to fetch users");
 				setLoading(false);
 			}
