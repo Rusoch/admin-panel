@@ -1,6 +1,7 @@
 "use client";
 
 import UserForm from "./UserForm";
+import Link from "next/link";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import Image from "next/image";
@@ -77,10 +78,10 @@ const UserList: React.FC = () => {
 		fetchUsers();
 	}, []);
 
-	  const refreshUserList = (newUser: User) => {
-    setUserList((prevList) => [...prevList, newUser]);
-  };
- 
+	const refreshUserList = (newUser: User) => {
+		setUserList((prevList) => [...prevList, newUser]);
+	};
+
 	if (loading) {
 		return <div>Loading...</div>;
 	}
@@ -95,6 +96,11 @@ const UserList: React.FC = () => {
 				<h1 className="font-serif text-4xl font-bold text-black-500">
 					User List
 				</h1>
+				<Link href="/login">
+					<button className=" flex justify-center bg-blue-500 text-white px-4 py-2 rounded">
+						Go to Login Page
+					</button>{" "}
+				</Link>
 				<button
 					onClick={showFormClick}
 					className="bg-[#0099ff] text-black font-bold  px-4 py-2 rounded mb-4"
@@ -103,9 +109,9 @@ const UserList: React.FC = () => {
 				</button>
 			</div>
 			{showForm && (
-				  <UserForm
-				  closeForm={() => setShowForm(false)}
-				  refreshUsers={refreshUserList}  
+				<UserForm
+					closeForm={() => setShowForm(false)}
+					refreshUsers={refreshUserList}
 				/>
 			)}
 			{showDeleteModal && (
@@ -168,7 +174,9 @@ const UserList: React.FC = () => {
 								</td>
 								<td className="border px-4 py-2">{user.email}</td>
 								<td className="border px-4 py-2">{user.age}</td>
-								<td className="border px-4 py-2"> {user.role ? user.role : 'user'}
+								<td className="border px-4 py-2">
+									{" "}
+									{user.role ? user.role : "user"}
 								</td>
 								<td className="border px-4 py-2">
 									{typeof user.address === "string"

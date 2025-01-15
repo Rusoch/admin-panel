@@ -1,6 +1,8 @@
 import { signIn } from 'next-auth/react';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+import Link from "next/link";
+
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -44,6 +46,8 @@ const LoginPage = () => {
         <button type="submit" style={{ width: '100%' }}>
           Login
         </button>
+        <Link href="/">
+        <button style={{ width: '100%' }}>Main Page</button> </Link>
       </form>
     </div>
   );
