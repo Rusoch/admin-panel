@@ -1,8 +1,14 @@
 ### admin-panel
+<<<<<<< HEAD
 A responsive Admin Panel built with Next.js, TypeScript, and Tailwind CSS. Features include user authentication in login page, CRUD operations getting, posting and deleting the data. 
 
 ### Table of Contents
 - Prerequisites
+=======
+A responsive Admin Panel built with Next.js, TypeScript, and Tailwind CSS. Features include user authentication, CRUD operations, pagination, and search. 
+
+### Table of Contents
+>>>>>>> 6b61481b6a8df46043b602f524ae639871688908
 - Features
 - Getting Started
 - Folder Structure
@@ -21,7 +27,11 @@ Ensure you have the following installed on your machine:
 ### Features
 - **User Authentication:** Login page with email and password authentication.
 - **User Management:** View a list of users with details such as name, email, age, and status.
+<<<<<<< HEAD
 - **CRUD Operations:** Add, edit, and delete users.
+=======
+- **CRUD Operations:** Add, edit, and delete users via modals and forms.
+>>>>>>> 6b61481b6a8df46043b602f524ae639871688908
 - **Responsive Design:** Optimized for desktop and mobile devices.
     
 ### Getting Started
@@ -44,6 +54,7 @@ Follow these steps to set the project up and running on your local machine:
     pnpm dev
     ```
 4. Open your browser and navigate to `http://localhost:3000` to view the app.
+<<<<<<< HEAD
 5. You’re now ready to start working on the code!
 6. To login, visit http://localhost:3000/login and use correct credentials for email: ruso@gmail.com; password: password123.
 
@@ -71,6 +82,21 @@ Follow these steps to set the project up and running on your local machine:
 
 - TypeScript - Static typing for safer code.
 
+=======
+5. You’re now ready to start working on your task!
+
+### Folder Strusture
+### Components
+- /components/
+### Pages
+- /pages/
+### Styles
+- /styles/globals.css - Global CSS styles.
+- /styles/tailwind.config.js - Tailwind configuration file for custom styles.
+### Technologies used
+- Next.js - React framework for server-side rendering and API routes.
+- TypeScript - Static typing for safer code.
+>>>>>>> 6b61481b6a8df46043b602f524ae639871688908
 - Tailwind CSS - Utility-first CSS framework for responsive and customizable design.
 
 ### License
